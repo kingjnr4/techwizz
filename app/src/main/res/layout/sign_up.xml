@@ -9,19 +9,26 @@
     android:orientation="vertical"
     tools:context=".SignUp">
 
-
-
     <TextView
+        android:id="@+id/fix_back_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SoccerXplorer"
+        android:text="Back"
+        android:layout_marginBottom="20dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="@font/logo"
-        android:textSize="33dp"
-        android:textColor="@color/black"
+        android:paddingTop="40dp"
+        android:drawableLeft="@drawable/chevron_left_48px"
         />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
 
 
     <LinearLayout
@@ -34,8 +41,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="SoccerXplorer"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/logo"
+            android:textSize="33dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Sign up"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:layout_marginBottom="10sp"
             android:fontFamily="@font/bold"
             android:textColor="@color/black"/>
@@ -52,6 +69,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:fontFamily="@font/medium"
+                android:textSize="13dp"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -66,6 +84,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:fontFamily="@font/medium"
+                android:textSize="13dp"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -80,6 +99,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:fontFamily="@font/medium"
+                android:textSize="13dp"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -101,6 +121,7 @@
                 android:inputType="textPassword"
                 android:fontFamily="@font/medium"
                 android:id="@+id/password"
+                android:textSize="13dp"
                 >
 
             </com.google.android.material.textfield.TextInputEditText>
@@ -165,7 +186,8 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
