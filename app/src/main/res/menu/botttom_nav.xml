@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_48px"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/explore"
+        android:icon="@drawable/sports_soccer_48px"
+        android:title="@string/explore" />
+
+    <item
+        android:id="@+id/saved"
+        android:icon="@drawable/favorite_48px"
+        android:title="@string/saved" />
+
+    <item
+        android:id="@+id/fixtures"
+        android:icon="@drawable/calendar_month_48px"
+        android:title="@string/fixtures" />
+
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/menu_48px"
+        android:title="@string/menu" />
+
 </menu>

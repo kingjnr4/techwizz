@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextInputLayout.NoFloatingHint" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Disable floating hint by using an empty animation -->
+<!--        <item name="boxStrokeColor">@android:color/transparent</item>-->
+        <item name="hintAnimationEnabled">false</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+</resources>

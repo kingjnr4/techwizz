@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">SoccerXplorer</string>
+    <string name="fixtures">Fixtures</string>
+    <string name="saved">Saved</string>
+    <string name="home">Home</string>
+    <string name="menu">Menu</string>
+    <string name="explore">Explore</string>
 </resources>
