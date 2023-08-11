@@ -53,7 +53,7 @@ public class FixtureAdapter extends RecyclerView.Adapter<FixtureAdapter.FixtureV
 
         holder.itemView.setOnClickListener(e->{
             System.out.println("clicking");
-            Intent intent = new Intent(view.getContext(), MatchFixture.class);
+            Intent intent = new Intent(view.getContext(), Player.class);
             startActivity(view.getContext(),intent,null);
         });
     }

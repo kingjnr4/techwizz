@@ -5,8 +5,8 @@
     android:background="@drawable/fixture_bg"
     android:orientation="horizontal"
     android:gravity="center"
-    android:paddingTop="40dp"
-    android:paddingBottom="40dp">
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="17dp"
             android:text="Primere Leauge"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/bold"
@@ -40,8 +40,8 @@
 
         <ImageView
             android:id="@+id/home_team_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/man_city_logo" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:text="Manchester city"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
     </LinearLayout>
 
     <!-- Score and Time -->
@@ -88,8 +88,8 @@
 
         <ImageView
             android:id="@+id/away_team_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/chelsea_logo" />
 
         <TextView
@@ -99,7 +99,7 @@
             android:text="Chelsea FC"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
     </LinearLayout>
 
         </LinearLayout>
