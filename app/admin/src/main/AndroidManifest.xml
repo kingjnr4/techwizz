@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".AddPlayer" />
+        <activity android:name=".AddTeam" />
+        <activity android:name=".AddCountry" />
+        <activity android:name=".AddLeague" />
     </application>
 
 </manifest>

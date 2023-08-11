@@ -71,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:fontFamily="@font/medium"
                 android:textSize="13dp"
+                android:id="@+id/username_field"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -86,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:fontFamily="@font/medium"
                 android:textSize="13dp"
+                android:id="@+id/email_field"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -101,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:fontFamily="@font/medium"
                 android:textSize="13dp"
+                android:id="@+id/phone_no_field"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -121,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:fontFamily="@font/medium"
-                android:id="@+id/password"
+                android:id="@+id/password_field"
                 android:textSize="13dp"
                 >
 
@@ -133,6 +136,7 @@
             android:layout_height="55dp"
             app:cornerRadius="5dp"
             android:fontFamily="@font/bold"
+            android:id="@+id/sign_up_btn"
             android:text="Sign up">
 
         </Button>

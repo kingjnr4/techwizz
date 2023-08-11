@@ -69,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
+                android:id="@+id/email_field"
                 android:textSize="13dp"
                 />
 
@@ -88,8 +89,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:id="@+id/password"
                 android:textSize="13dp"
+                android:id="@+id/password_fields"
                 android:fontFamily="@font/medium"
                 >
 
@@ -101,6 +102,7 @@
             android:layout_height="55dp"
             app:cornerRadius="5dp"
             android:fontFamily="@font/bold"
+            android:id="@+id/sign_in_btn"
             android:text="Sign in">
 
         </Button>
