@@ -32,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
             if(item.getItemId() == R.id.home){
                 getSupportFragmentManager().beginTransaction().replace(R.id.home_container,home).commit();
                 return true;
-            } else if (item.getItemId() == R.id.saved) {
+            }
+            else if (item.getItemId() == R.id.saved) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.home_container,saved).commit();
                 return true;
-            }else if (item.getItemId() == R.id.fixtures) {
+            }
+            else if (item.getItemId() == R.id.fixtures) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.home_container,fixtures).commit();
                 return true;
             }else if (item.getItemId() == R.id.menu) {

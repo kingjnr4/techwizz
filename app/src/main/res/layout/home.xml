@@ -46,14 +46,14 @@
                 android:textSize="17sp"
                 android:text="Live Match"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/font_color"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:textSize="14dp"
                 android:textAlignment="center"
-                android:text="Se all"
+                android:text="See all"
                 android:drawableEnd="@drawable/chevron_right_48px" />
 
 
@@ -87,14 +87,14 @@
                 android:textSize="17sp"
                 android:text="Today's fixture"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/font_color"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:textSize="14dp"
                 android:textAlignment="center"
-                android:text="Se all"
+                android:text="View all"
                 android:drawableEnd="@drawable/chevron_right_48px" />
 
 

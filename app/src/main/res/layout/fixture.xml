@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:paddingRight="15dp"
     android:paddingLeft="15dp"
+    android:background="@color/background"
     android:paddingTop="20dp">
     <TextView
         android:id="@+id/fix_back_label"
@@ -119,7 +120,7 @@
            android:layout_weight="1"
            android:layout_height="30dp"
            android:textAlignment="center"
-           android:text="Statistics"
+           android:text="Home"
            android:gravity="center"
            android:background="@drawable/chip_bg"
            android:layout_marginRight="8dp"
@@ -132,7 +133,7 @@
            android:layout_weight="1"
            android:layout_height="30dp"
            android:textAlignment="center"
-           android:text="Formation"
+           android:text="Away"
            android:gravity="center"
            android:layout_marginRight="5dp"
            android:background="@drawable/chip_bg"

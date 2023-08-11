@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.MatchFixture;
+import com.example.myapplication.Player;
 import com.example.myapplication.R;
 import com.example.myapplication.model.Fixture;
 

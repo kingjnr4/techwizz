@@ -12,7 +12,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/whitesmoke"
+        android:background="@color/background"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -30,10 +30,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemIconSize="26dp"
-        android:background="@color/white"
+        app:itemIconSize="23dp"
+        style="@style/bottom_nav"
         app:itemRippleColor="@color/white"
-        android:outlineSpotShadowColor="@color/black"
         app:menu="@menu/botttom_nav" />
 
 </RelativeLayout>

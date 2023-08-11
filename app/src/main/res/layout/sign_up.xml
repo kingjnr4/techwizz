@@ -7,6 +7,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/background"
     tools:context=".SignUp">
 
     <TextView
@@ -45,7 +46,7 @@
             android:layout_marginBottom="40dp"
             android:fontFamily="@font/logo"
             android:textSize="33dp"
-            android:textColor="@color/black"
+            android:textColor="@color/font_color"
             />
 
         <TextView
@@ -55,7 +56,7 @@
             android:textSize="22sp"
             android:layout_marginBottom="10sp"
             android:fontFamily="@font/bold"
-            android:textColor="@color/black"/>
+            android:textColor="@color/font_color"/>
 
 
 
@@ -156,7 +157,7 @@
             android:fontFamily="@font/medium"
             android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/black"/>
+            android:textColor="@color/font_color"/>
 
         <LinearLayout
             android:layout_width="match_parent"

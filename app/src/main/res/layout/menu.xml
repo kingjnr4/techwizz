@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
                     android:fontFamily="@font/bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/font_color"
                     android:text="John Doe" />
 
                 <TextView
@@ -69,13 +69,21 @@
         </LinearLayout>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textSize="14dp"
+            android:paddingLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="4dp" />
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/menu_background"
             android:orientation="horizontal"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:id="@+id/settings_route"
             android:padding="16dp">
 
@@ -86,7 +94,8 @@
                 android:textSize="14sp"
                 android:text="Settings"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/font_color"
+                />
 
             <ImageView
                 android:layout_width="25dp"
@@ -104,7 +113,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/menu_background"
             android:orientation="horizontal"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:padding="16dp">
 
             <TextView
@@ -114,7 +123,8 @@
                 android:textSize="14sp"
                 android:text="Feedback"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/font_color"
+                />
 
             <ImageView
                 android:layout_width="25dp"
@@ -141,7 +151,8 @@
                 android:textSize="14sp"
                 android:text="Contact us"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/font_color"
+                />
 
             <ImageView
                 android:layout_width="25dp"

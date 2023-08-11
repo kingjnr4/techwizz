@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
-            android:textColor="@color/black"
+            android:textColor="@color/font_color"
             android:text="Manchester City" />
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textSize="12dp"
             android:id="@+id/home_team_name"
-            android:textColor="@color/black"
+            android:textColor="@color/font_color"
             android:text="Chelsea FC" />
     </LinearLayout>
 
@@ -50,6 +50,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
             android:textSize="16sp"
+            android:textColor="@color/font_color"
             android:text="06:30" />
     </LinearLayout>
 </LinearLayout>

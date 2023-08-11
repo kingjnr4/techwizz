@@ -28,7 +28,7 @@ public class Home extends Fragment {
         View view = inflater.inflate(R.layout.home, container, false);
 
 
-        List<Fixture> fixtureList = FixtureDataGenerator.generateSampleFixtures().subList(0,3);
+        List<Fixture> fixtureList = FixtureDataGenerator.generateSampleFixtures().subList(0,4);
 
 
         FixtureAdapter adapter = new FixtureAdapter(view.getContext(), fixtureList);
