@@ -3,32 +3,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
-           <TextView
-               android:layout_width="1dp"
-               android:layout_weight="1"
-               android:layout_height="wrap_content"
-               android:textSize="22sp"
-               android:fontFamily="@font/bold"
-               android:text="Home" />
-       </LinearLayout>
-    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:ignore="MissingClass">
+        android:gravity="start"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Home"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:orientation="vertical"
+            tools:ignore="MissingClass">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Live Match"
+                    android:textColor="@color/font_color"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:drawableEnd="@drawable/chevron_right_48px"
+                    android:text="See all"
+                    android:textAlignment="center"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <include layout="@layout/live_match_card" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Top scores"
+                    android:textColor="@color/font_color"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/view_all_top_score_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:drawableEnd="@drawable/chevron_right_48px"
+                    android:text="View all"
+                    android:textAlignment="center"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="50dp"
+                android:id="@+id/top_score_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -36,47 +147,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            >
-
-            <TextView
-                android:layout_width="1dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:textSize="17sp"
-                android:text="Live Match"
-                android:textStyle="bold"
-                android:textColor="@color/font_color"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:textSize="14dp"
-                android:textAlignment="center"
-                android:text="See all"
-                android:drawableEnd="@drawable/chevron_right_48px" />
-
-
-        </LinearLayout>
-
-       <include layout="@layout/live_match_card" />
-
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
             >
 
@@ -106,13 +176,12 @@
             android:layout_height="wrap_content"
             />
 
-
-<!--        <include layout="@layout/todays_fixture" />-->
-<!--        <include layout="@layout/todays_fixture" />-->
-<!--        <include layout="@layout/todays_fixture" />-->
-<!--        <include layout="@layout/todays_fixture" />-->
-<!--        <include layout="@layout/todays_fixture" />-->
-<!--        <include layout="@layout/todays_fixture" />-->
     </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
 
 </LinearLayout>

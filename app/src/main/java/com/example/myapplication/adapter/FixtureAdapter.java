@@ -12,8 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.MatchFixture;
-import com.example.myapplication.Player;
+import com.example.myapplication.Club;
 import com.example.myapplication.R;
 import com.example.myapplication.model.Fixture;
 
@@ -52,8 +51,7 @@ public class FixtureAdapter extends RecyclerView.Adapter<FixtureAdapter.FixtureV
         holder.matchTime.setText(fixture.getDate().format(timeFormatter));
 
         holder.itemView.setOnClickListener(e->{
-            System.out.println("clicking");
-            Intent intent = new Intent(view.getContext(), Player.class);
+            Intent intent = new Intent(view.getContext(), Club.class);
             startActivity(view.getContext(),intent,null);
         });
     }
