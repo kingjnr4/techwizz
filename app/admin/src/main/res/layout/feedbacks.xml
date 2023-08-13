@@ -17,15 +17,9 @@
             android:layout_height="wrap_content"
             android:textSize="22sp"
             android:fontFamily="@font/bold"
-            android:text="Fixtures" />
+            android:text="Feedbacks" />
 
-        <Button
-            android:id="@+id/add_fixture_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add fixtures"
-            app:cornerRadius="5dp"
-            android:textSize="13dp"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -34,9 +28,9 @@
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
-        <include layout="@layout/fixture_card" />
-        <include layout="@layout/fixture_card" />
-        <include layout="@layout/fixture_card" />
+        <include layout="@layout/feedback_item" />
+        <include layout="@layout/feedback_item" />
+        <include layout="@layout/feedback_item" />
 
 
     </LinearLayout>

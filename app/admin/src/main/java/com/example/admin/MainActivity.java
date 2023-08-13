@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     Menu menu = new Menu();
     Fixtures fixtures = new Fixtures();
 
+    FeebackFragment feedbacks = new FeebackFragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }else if (item.getItemId() == R.id.menu) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.home_container,menu).commit();
+                return true;
+            }
+            else if (item.getItemId() == R.id.feedbacks) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.home_container,feedbacks).commit();
                 return true;
             }
             return false;

@@ -12,6 +12,11 @@
         android:title="@string/fixtures" />
 
     <item
+        android:id="@+id/feedbacks"
+        android:icon="@drawable/reviews_48px"
+        android:title="@string/feedbacks" />
+
+    <item
         android:id="@+id/menu"
         android:icon="@drawable/menu_48px"
         android:title="@string/menu" />
