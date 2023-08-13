@@ -37,7 +37,7 @@ public class SignUp extends AppCompatActivity {
     private TextInputLayout usernameContainer, emailContainer, phoneContainer, passwordContainer;
     private TextInputEditText usernameField, emailField, phoneField, passwordField;
     private Button signUpButton, googleSignInButton;
-   private  Intent mainActivityIntent;
+    private  Intent mainActivityIntent;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +72,7 @@ public class SignUp extends AppCompatActivity {
         signInLink.setOnClickListener(v -> {
             Intent intent = new Intent(SignUp.this, SignIn.class);
             startActivity(intent);
+            finish();
         });
         googleSignInButton.setOnClickListener(v -> {
             Intent signInIntent = googleSignInClient.getSignInIntent();
@@ -122,18 +123,19 @@ public class SignUp extends AppCompatActivity {
             User user = User.builder().email(emailField.getText().toString())
                     .username(usernameField.getText().toString())
                     .phone(usernameField.getText().toString()).build();
-          signUpWithEmailAndPassword(user,passwordField.getText().toString());
+            signUpWithEmailAndPassword(user,passwordField.getText().toString());
         }
     }
 
     private void signUpWithEmailAndPassword(User user,String password) {
-         mAuth.createUserWithEmailAndPassword(user.getEmail(), password)
+        mAuth.createUserWithEmailAndPassword(user.getEmail(), password)
                 .addOnCompleteListener(this, task -> {
                     if(task.isSuccessful()){
                         FirebaseUser authCurrentUser = mAuth.getCurrentUser();
                         if (authCurrentUser != null) {
                             db.collection("users").document(user.getEmail()).set(user).addOnCompleteListener(task1 ->{
                                 startActivity(mainActivityIntent);
+                                finish();
                             } );
                         }
                     }
@@ -187,12 +189,12 @@ public class SignUp extends AppCompatActivity {
                                     .phone(authCurrentUser.getPhoneNumber())
                                     .picture(authCurrentUser.getPhotoUrl().toString())
                                     .uid(authCurrentUser.getUid()).build();
-                           db.collection("users").document(user.getEmail()).set(user).addOnCompleteListener(task1 ->{
-                               startActivity(mainActivityIntent);
-                           } );
+                            db.collection("users").document(user.getEmail()).set(user).addOnCompleteListener(task1 ->{
+                                startActivity(mainActivityIntent);
+                                finish();
+                            } );
                         }
                     }
                 });
     }
 }
-
