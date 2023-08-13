@@ -68,7 +68,9 @@ public class Saved extends Fragment {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+                System.out.println("reselected");
                 savedViewPage2.setVisibility(View.VISIBLE);
+
             }
         });
 

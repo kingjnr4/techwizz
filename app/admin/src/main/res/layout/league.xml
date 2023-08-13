@@ -57,13 +57,12 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="10dp"
-            android:id="@+id/top_score_recyclerview"
+            android:id="@+id/league_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/league_item"
             />
 
-        <include layout="@layout/league_item" />
-        <include layout="@layout/league_item" />
 
     </LinearLayout>
 
