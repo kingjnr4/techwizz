@@ -28,7 +28,6 @@ public class Settings extends AppCompatActivity {
 
         LinearLayout editUsernameList = findViewById(R.id.edit_phone_username_list);
         LinearLayout ediPhoneNotList = findViewById(R.id.edit_phone_number_list);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         TextView changePasswordList = findViewById(R.id.change_password_list);
 
         editUsernameList.setOnClickListener(e->{

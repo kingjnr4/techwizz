@@ -38,6 +38,22 @@
         android:orientation="vertical"
         >
 
+        <ImageView
+            android:padding="8dp"
+            android:id="@+id/new_league_logo"
+            android:layout_width="140dp"
+            android:background="@drawable/item_bg_2"
+            android:src="@drawable/player_ronaldo_2"
+            android:layout_height="160dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="Click the box above to player picture" />
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/player_first_name_container"
