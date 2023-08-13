@@ -118,6 +118,7 @@
 
         <Button
             android:drawableLeft="@drawable/google_logo"
+            android:id="@+id/continue_google"
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="55dp"

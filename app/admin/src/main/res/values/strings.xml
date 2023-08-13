@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SoccerXplorer</string>
+    <string name="app_name">SoccerXplorerAdmin</string>
     <string name="fixtures">Fixtures</string>
     <string name="saved">Saved</string>
     <string name="home">Home</string>
