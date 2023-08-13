@@ -27,6 +27,11 @@
         <activity android:name=".PlayersActivity" />
         <activity android:name=".LeagueActivity" />
         <activity android:name=".CountryActivity" />
+        <activity android:name=".AddFixtureActivity" />
+        <activity android:name=".Contactus" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".AddAdminActivity" />
+        <activity android:name=".SettingsActivity" />
     </application>
 
 </manifest>
