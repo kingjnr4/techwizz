@@ -8,4 +8,8 @@
     </string>
     <string name="explore">Explore</string><string name="biography_test">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla velit vero rerum suscipit veritatis excepturi, tenetur numquam, nisi ratione qui commodi. Ipsam dolore quo praesentium suscipit fugit maxime modi?</string>
     <string name="feedbacks">Feedbacks</string>
+
+    <string name="contact_address">MBM PLAZA, 48 Old Aba Rd, near Shell I.A.) Rumubiokani, Rumuola 500102, Port Harcourt, Rivers</string>
+    <string name="contact_phone_number">+2347014099010</string>
+    <string name="contact_email_address">nojexaptech@gmail.com</string>
 </resources>
