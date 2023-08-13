@@ -22,6 +22,9 @@ public class Menu extends Fragment {
         LinearLayout addAdminRouteLink = view.findViewById(R.id.add_admin_route);
         LinearLayout adminRouteLink = view.findViewById(R.id.view_admin_route);
         LinearLayout contactusRouteLink = view.findViewById(R.id.contact_us_route);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        LinearLayout logoutRoutLink = view.findViewById(R.id.logout_route);
+
 
         settingsRouteLink.setOnClickListener(e->{
             Intent intent = new Intent(view.getContext(), SettingsActivity.class);
@@ -40,6 +43,11 @@ public class Menu extends Fragment {
 
         contactusRouteLink.setOnClickListener(e->{
             Intent intent = new Intent(view.getContext(), Contactus.class);
+            startActivity(intent);
+        });
+
+        logoutRoutLink.setOnClickListener(e->{
+            Intent intent = new Intent(view.getContext(), SignIn.class);
             startActivity(intent);
         });
 
