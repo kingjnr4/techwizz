@@ -72,6 +72,7 @@ public class SignUp extends AppCompatActivity {
         signInLink.setOnClickListener(v -> {
             Intent intent = new Intent(SignUp.this, SignIn.class);
             startActivity(intent);
+            finish();
         });
         googleSignInButton.setOnClickListener(v -> {
             Intent signInIntent = googleSignInClient.getSignInIntent();
@@ -134,6 +135,7 @@ public class SignUp extends AppCompatActivity {
                         if (authCurrentUser != null) {
                             db.collection("users").document(user.getEmail()).set(user).addOnCompleteListener(task1 ->{
                                 startActivity(mainActivityIntent);
+                                finish();
                             } );
                         }
                     }
@@ -189,6 +191,7 @@ public class SignUp extends AppCompatActivity {
                                     .uid(authCurrentUser.getUid()).build();
                            db.collection("users").document(user.getEmail()).set(user).addOnCompleteListener(task1 ->{
                                startActivity(mainActivityIntent);
+                               finish();
                            } );
                         }
                     }

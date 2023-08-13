@@ -43,7 +43,6 @@ public class AddLeague extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 CountryItem clickedItem = (CountryItem) parent.getItemAtPosition(position);
                 String clickedCountryName = clickedItem.getCountryName();
-                Toast.makeText(AddLeague.this, clickedCountryName + " selected", Toast.LENGTH_SHORT).show();
             }
 
             @Override

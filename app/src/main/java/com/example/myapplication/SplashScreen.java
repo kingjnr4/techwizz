@@ -20,15 +20,23 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen);
         mAuth=FirebaseAuth.getInstance();
-        Intent intent;
-        if (isLoggedIn()){
-            intent= new Intent(SplashScreen.this,MainActivity.class);
-            startActivity(intent);
-            return;
-        }
-        intent= new Intent(SplashScreen.this,SignUp.class);
-        startActivity(intent);
-        finish();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent;
+                if (isLoggedIn()){
+                    intent= new Intent(SplashScreen.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                    return;
+                }
+                intent= new Intent(SplashScreen.this,SignUp.class);
+                startActivity(intent);
+                finish();
+            }},2000);
+
+
     }
 
     public boolean isLoggedIn(){
