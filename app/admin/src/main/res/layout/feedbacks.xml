@@ -27,11 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
-
-        <include layout="@layout/feedback_item" />
-        <include layout="@layout/feedback_item" />
-        <include layout="@layout/feedback_item" />
-
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:id="@+id/feedback_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/feedback_item"
+        />
 
     </LinearLayout>
 

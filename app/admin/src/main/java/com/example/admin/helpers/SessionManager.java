@@ -2,11 +2,13 @@ package com.example.admin.helpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import com.example.admin.enums.Role;
 
 public class SessionManager {
     private static final String PREF_NAME = "SessionPref";
     private static final String KEY_USER_ID = "userId";
     private static final String KEY_USER_NAME = "userName";
+    private static final String KEY_ROLE = "role";
     private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
 
     private SharedPreferences sharedPreferences;
@@ -19,9 +21,10 @@ public class SessionManager {
         editor = sharedPreferences.edit();
     }
 
-    public void createSession(String userId, String userName) {
+    public void createSession(String userId, String userName, Role role) {
         editor.putString(KEY_USER_ID, userId);
         editor.putString(KEY_USER_NAME, userName);
+        editor.putString(KEY_ROLE, role.name());
         editor.putBoolean(KEY_IS_LOGGED_IN, true);
         editor.apply();
     }
@@ -41,5 +44,10 @@ public class SessionManager {
 
     public String getUserName() {
         return sharedPreferences.getString(KEY_USER_NAME, null);
+    }
+
+    public Role getRole() {
+        String roleString = sharedPreferences.getString(KEY_ROLE, "");
+        return Role.valueOf(roleString);
     }
 }

@@ -52,15 +52,26 @@
             android:layout_height="wrap_content"
             android:textSize="10dp"
             android:text="Click the box above to team logo" />
-
+        <Spinner
+                android:id="@+id/spinner_leagues"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:prompt="@string/app_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/item_bg_2"
+                android:autofillHints="Country"
+        />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_container"
+            android:id="@+id/team_name_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="Enter team name">
 
             <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/team_name_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
@@ -78,6 +89,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
+                android:id="@+id/team_short_name_field"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
                 android:textSize="13dp"
@@ -94,6 +106,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
+                android:id="@+id/team_manager_name_field"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
                 android:textSize="13dp"
@@ -101,10 +114,29 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/team_rating_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter Team Rating">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/team_rating_field"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:textSize="13dp"
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
 
         <Button
             android:layout_width="match_parent"
+            android:id="@+id/add_team_btn"
             android:layout_height="55dp"
             app:cornerRadius="5dp"
             android:fontFamily="@font/bold"

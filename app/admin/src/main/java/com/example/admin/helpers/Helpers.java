@@ -20,6 +20,11 @@ import org.signal.argon2.Version;
 import org.signal.argon2.Argon2Exception;
 import org.signal.argon2.UnknownTypeException;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Random;
+
 
 public  class Helpers {
     static String salt = "SALTY_SOCCER";
@@ -70,5 +75,20 @@ public  class Helpers {
         // Close the popup window after a delay
         new Handler().postDelayed(popupWindow::dismiss, autoCloseDelayMillis);
     }
+    public static String generateRandomImageName() {
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String randomString = getRandomString(6); // Adjust the length of the random string
+        return "image_" + timestamp + "_" + randomString + ".jpg";
+    }
 
+    public static String getRandomString(int length) {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder randomString = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(characters.length());
+            randomString.append(characters.charAt(index));
+        }
+        return randomString.toString();
+    }
 }

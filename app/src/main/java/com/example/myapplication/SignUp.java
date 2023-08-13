@@ -122,7 +122,7 @@ public class SignUp extends AppCompatActivity {
         if (isValid) {
             User user = User.builder().email(emailField.getText().toString())
                     .username(usernameField.getText().toString())
-                    .phone(usernameField.getText().toString()).build();
+                    .phone(phoneField.getText().toString()).build();
             signUpWithEmailAndPassword(user,passwordField.getText().toString());
         }
     }
@@ -133,6 +133,8 @@ public class SignUp extends AppCompatActivity {
                     if(task.isSuccessful()){
                         FirebaseUser authCurrentUser = mAuth.getCurrentUser();
                         if (authCurrentUser != null) {
+                            user.setUid(authCurrentUser.getUid());
+                            user.setPicture(authCurrentUser.getPhotoUrl().toString());
                             db.collection("users").document(user.getEmail()).set(user).addOnCompleteListener(task1 ->{
                                 startActivity(mainActivityIntent);
                                 finish();

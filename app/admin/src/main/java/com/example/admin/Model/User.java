@@ -1,6 +1,5 @@
 package com.example.admin.Model;
 
-import com.example.admin.enums.Role;
 import com.google.firebase.firestore.DocumentId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,10 +12,14 @@ import javax.annotation.Nullable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Admin {
+public class User {
     @DocumentId
     private String id;
+    private String uid;
     private String username;
-    private String password;
-    private Role role;
+    private String email;
+    @Nullable
+    private String phone;
+    @Nullable
+    private String picture;
 }

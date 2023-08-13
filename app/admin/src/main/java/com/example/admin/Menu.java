@@ -9,9 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import android.widget.TextView;
 import androidx.fragment.app.Fragment;
+import com.example.admin.helpers.SessionManager;
 
 public class Menu extends Fragment {
+    private TextView usernameField;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -24,8 +27,9 @@ public class Menu extends Fragment {
         LinearLayout contactusRouteLink = view.findViewById(R.id.contact_us_route);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         LinearLayout logoutRoutLink = view.findViewById(R.id.logout_route);
-
-
+        usernameField=view.findViewById(R.id.username_field);
+        SessionManager sessionManager = new SessionManager(getContext());
+        usernameField.setText(sessionManager.getUserName());
         settingsRouteLink.setOnClickListener(e->{
             Intent intent = new Intent(view.getContext(), SettingsActivity.class);
             startActivity(intent);
@@ -47,6 +51,7 @@ public class Menu extends Fragment {
         });
 
         logoutRoutLink.setOnClickListener(e->{
+            new SessionManager(getActivity()).logout();
             Intent intent = new Intent(view.getContext(), SignIn.class);
             startActivity(intent);
         });

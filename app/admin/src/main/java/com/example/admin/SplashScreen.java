@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.admin.helpers.SessionManager;
@@ -24,6 +25,7 @@ public class SplashScreen extends AppCompatActivity {
                 SessionManager sessionManager = new SessionManager(SplashScreen.this);
                 if(sessionManager.isLoggedIn()){
                     Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                    Log.d("ROLE",sessionManager.getRole().toString());
                     startActivity(intent);
                     finish();
                     return;

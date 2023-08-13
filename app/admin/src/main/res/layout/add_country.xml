@@ -58,7 +58,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_container"
+            android:id="@+id/country_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -68,6 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/medium"
+                android:id="@+id/country_field"
                 android:textSize="13dp"
                 />
 
@@ -79,6 +80,7 @@
             android:layout_height="55dp"
             app:cornerRadius="5dp"
             android:fontFamily="@font/bold"
+            android:id="@+id/ad_country_btn"
             android:text="Add country"/>
 
 

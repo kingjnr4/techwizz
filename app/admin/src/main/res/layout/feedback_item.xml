@@ -11,6 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/feedback_message"
         android:text="@string/feedback_test"/>
 
     <LinearLayout
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/bold"
+            android:id="@+id/feedback_email"
             android:textSize="13dp"
             android:text="johndoe@gmail.com"/>
 
@@ -31,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/medium"
+            android:id="@+id/feedback_date"
             android:textSize="10dp"
             android:text="8 Oct, 2020, 9:45 AM"/>
 

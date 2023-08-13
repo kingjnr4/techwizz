@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -71,8 +72,9 @@ public class SignIn extends AppCompatActivity {
                         Admin admin = snapshot.getDocuments().get(0).toObject(Admin.class);
                         try {
                             if (admin!=null && Helpers.verify(admin.getPassword(),passwordField.getText().toString())){
-                                new SessionManager(this).createSession(admin.getId(),admin.getUsername());
+                                new SessionManager(this).createSession(admin.getId(),admin.getUsername(),admin.getRole());
                                 Intent intent = new Intent(SignIn.this, MainActivity.class);
+
                                 startActivity(intent);
                             }
                             else {
