@@ -23,6 +23,10 @@
         <activity android:name=".AddTeam" />
         <activity android:name=".AddCountry" />
         <activity android:name=".AddLeague" />
+        <activity android:name=".TeamActivity" />
+        <activity android:name=".PlayersActivity" />
+        <activity android:name=".LeagueActivity" />
+        <activity android:name=".CountryActivity" />
     </application>
 
 </manifest>
