@@ -114,57 +114,48 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/date_select_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Select league">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:textSize="13dp"
-                android:text="Select Date"/>
-
-            <Spinner
-                android:background="@drawable/item_bg_2"
-                android:id="@+id/spinner_date"
+                android:id="@+id/fixture_date_container"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                />
+                android:hint="Enter Fixture Date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:id="@+id/fixture_date_field"
+                    android:fontFamily="@font/medium"
+                    android:textSize="13dp"
+            />
 
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/time_select_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Select league">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:textSize="13dp"
-                android:text="Select Time"/>
+        android:id="@+id/fixture_time_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Fixture Date">
 
-            <Spinner
-                android:background="@drawable/item_bg_2"
-                android:id="@+id/spinner_time"
+        <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
-                />
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="none"
+                android:id="@+id/fixture_time_field"
+                android:fontFamily="@font/medium"
+                android:textSize="13dp"
+        />
 
-        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-        <Button
+
+    <Button
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:id="@+id/save_fixture"
             app:cornerRadius="5dp"
             android:fontFamily="@font/bold"
             android:text="Add Fixture"/>

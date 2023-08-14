@@ -1,149 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:paddingRight="15dp"
-    android:paddingLeft="15dp"
-    android:background="@color/background"
-    android:paddingTop="20dp">
+<ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:orientation="vertical"
+                  android:paddingRight="15dp"
+                  android:paddingLeft="15dp"
+                  android:background="@color/background"
+                  android:paddingTop="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/back_nav"
-            android:layout_width="26dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/arrow_back_48px"
-            android:layout_marginRight="10dp"
+            <ImageView
+                    android:id="@+id/back_nav"
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_back_48px"
+                    android:layout_marginRight="10dp"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:fontFamily="@font/bold"
-            android:text="Add player" />
-    </LinearLayout>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bold"
+                    android:text="Add player" />
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
         >
 
-        <ImageView
-            android:padding="8dp"
-            android:id="@+id/new_league_logo"
-            android:layout_width="140dp"
-            android:background="@drawable/item_bg_2"
-            android:src="@drawable/player_ronaldo_2"
-            android:layout_height="160dp"
-            android:layout_marginRight="10dp"
+            <ImageView
+                    android:padding="8dp"
+                    android:id="@+id/new_player_logo"
+                    android:layout_width="140dp"
+                    android:background="@drawable/item_bg_2"
+                    android:src="@drawable/player_ronaldo_2"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="10dp"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="10dp"
-            android:text="Click the box above to player picture" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:text="Click the box above to upload player picture" />
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/player_first_name_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:hint="Enter players first name">
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_firstname_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players first name">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/medium"
-                android:textSize="13dp"
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/player_firstname_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/player_weight_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:hint="Enter players weight">
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_lastname_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players lastname">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/medium"
-                android:textSize="13dp"
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/player_lastname_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/player_age_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:hint="Enter players age">
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_weight_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players weight">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/medium"
-                android:textSize="13dp"
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/player_weight"
+                        android:inputType="number"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/player_height_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:hint="Enter players height">
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_height_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players height">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/medium"
-                android:textSize="13dp"
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
+                        android:id="@+id/player_height"
+                        android:inputType="number"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/player_biography_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:hint="Enter players Biograpy">
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_age_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players age">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/medium"
-                android:textSize="13dp"
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
+                        android:id="@+id/player_age"
+                        android:inputType="number"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_goals_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players goals">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            app:cornerRadius="5dp"
-            android:fontFamily="@font/bold"
-            android:text="Add player"/>
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
+                        android:id="@+id/player_goals"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_matches_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players matches">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
+                        android:id="@+id/player_matches"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/player_biography_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Enter players Biograpy">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:textSize="13dp"
+                        android:id="@+id/player_biography"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                    android:id="@+id/spinner_teams"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_bg_2"
+                    android:autofillHints="Team"
+            />
+            <Spinner
+                    android:id="@+id/spinner_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:prompt="@string/app_name"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_bg_2"
+                    android:autofillHints="Position"
+            />
+            <Button
+                    android:layout_width="match_parent"
+                    android:id="@+id/save_player"
+                    android:layout_height="55dp"
+                    app:cornerRadius="5dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Add player"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>
