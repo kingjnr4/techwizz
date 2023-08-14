@@ -170,6 +170,7 @@ public class AddPlayer extends AppCompatActivity {
                     .position((String) postionsSpinner.getSelectedItem())
                     .team((Team) teamsSpinner.getSelectedItem())
                     .build();
+            uploadImageToFirebaseStorage(imageUri,player);
         }
     }
 
