@@ -24,84 +24,292 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_container"
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            android:background="@drawable/item_bg_2"
             android:layout_marginBottom="10dp"
-            app:startIconDrawable="@drawable/search_48px"
-            android:hint="Search...">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:textSize="12sp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/medium"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
+            app:queryHint="Search teams" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/search_container"
+            android:orientation="vertical"
             >
 
-            <LinearLayout
-                android:layout_marginRight="5dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="85dp"
-                android:orientation="vertical"
-                android:padding="12dp"
-                android:background="@drawable/league_bg"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Search Results"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 >
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:textColor="@color/white"
-                    android:drawableTop="@drawable/trophy_48px"
-                    />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
 
-                <TextView
-                    android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/players_search_recyclerview_container"
+                >
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16dp"
-                    android:textColor="@color/white"
-                    android:text="League" />
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Players"
+                        android:textStyle="bold"
+                        android:textColor="@color/font_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textSize="14dp"
+                        android:textAlignment="center"
+                        android:text="View all"
+                        android:drawableEnd="@drawable/chevron_right_48px" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/players_search_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/home_player_item"
+                    />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="85dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="5dp"
-                android:padding="12dp"
-                android:background="@drawable/league_bg_1"
+                android:id="@+id/country_search_recyclerview_container"
                 >
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    >
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/flag_48px"
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Countries"
+                        android:textStyle="bold"
+                        android:textColor="@color/font_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textSize="14dp"
+                        android:textAlignment="center"
+                        android:text="View all"
+                        android:drawableEnd="@drawable/chevron_right_48px" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/country_search_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/country_item2"
                     />
 
-                <TextView
-                    android:layout_width="wrap_content"
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/league_search_recyclerview_container"
+                >
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16dp"
-                    android:textColor="@color/white"
-                    android:text="Country" />
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Leagues"
+                        android:textStyle="bold"
+                        android:textColor="@color/font_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textSize="14dp"
+                        android:textAlignment="center"
+                        android:text="View all"
+                        android:drawableEnd="@drawable/chevron_right_48px" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/league_search_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/league_item"
+                    />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/club_search_recyclerview_container"
+                >
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Clubs"
+                        android:textStyle="bold"
+                        android:textColor="@color/font_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textSize="14dp"
+                        android:textAlignment="center"
+                        android:text="View all"
+                        android:drawableEnd="@drawable/chevron_right_48px" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/club_search_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/club_item2"
+                    />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            </ScrollView>
 
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/explore_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="85dp"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:background="@drawable/league_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:drawableTop="@drawable/trophy_48px"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:text="League" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="85dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:padding="12dp"
+                    android:background="@drawable/league_bg_1"
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/flag_48px"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:text="Country" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -148,7 +356,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
@@ -180,6 +388,8 @@
 
 
             </LinearLayout>
+
+        </LinearLayout>
 
         </LinearLayout>
 

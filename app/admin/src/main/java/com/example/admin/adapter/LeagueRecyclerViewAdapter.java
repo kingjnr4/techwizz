@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.admin.Model.Country;
 import com.example.admin.Model.Feedback;
 import com.example.admin.Model.League;
 import com.example.admin.Model.Team;
@@ -52,6 +53,11 @@ public class LeagueRecyclerViewAdapter extends RecyclerView.Adapter<LeagueRecycl
     @Override
     public int getItemCount() {
         return leagues.size();
+    }
+
+    public void filterList(List<League> filteredList) {
+        leagues = filteredList;
+        notifyDataSetChanged();
     }
 
     public class LeagueViewHolder extends RecyclerView.ViewHolder{

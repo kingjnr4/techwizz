@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.admin.Model.Country;
+import com.example.admin.Model.Team;
 import com.example.admin.R;
 
 import java.util.List;
@@ -50,6 +51,11 @@ public class CountryRecyclerViewAdapter extends RecyclerView.Adapter<CountryRecy
     @Override
     public int getItemCount() {
         return countries.size();
+    }
+
+    public void filterList(List<Country> filteredList) {
+        countries = filteredList;
+        notifyDataSetChanged();
     }
 
     public class CountryViewHolder extends RecyclerView.ViewHolder{

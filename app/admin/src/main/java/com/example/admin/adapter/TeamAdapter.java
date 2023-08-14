@@ -52,6 +52,11 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder
         return teams.size();
     }
 
+    public void filterList(List<Team> filteredList) {
+        teams = filteredList;
+        notifyDataSetChanged();
+    }
+
     public class TeamViewHolder extends RecyclerView.ViewHolder{
         ImageView teamLogo;
         TextView teamName;

@@ -31,29 +31,28 @@
             android:text="Teams" />
     </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_container"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        app:startIconDrawable="@drawable/search_48px"
-        android:hint="Search teams">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:textSize="12sp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/medium"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent"
+        android:background="@drawable/item_bg_2"
+        app:queryHint="Search teams" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/displayed_message"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Loading..."
+            android:textAlignment="center"
+            android:gravity="center"
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="10dp"
