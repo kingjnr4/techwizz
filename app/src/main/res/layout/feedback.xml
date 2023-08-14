@@ -57,6 +57,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/menu_background"
                 android:fontFamily="@font/medium"
+                android:id="@+id/feedback_input"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -64,6 +65,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/submit_feedback"
             app:cornerRadius="5dp"
             android:text="Submit" />
 
