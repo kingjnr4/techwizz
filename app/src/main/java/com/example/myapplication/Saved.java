@@ -15,6 +15,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.example.myapplication.adapter.SaveViewPageAdapter;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Objects;
+
 public class Saved extends Fragment {
 
     TabLayout savedTabLayout;
@@ -29,7 +31,7 @@ public class Saved extends Fragment {
 
         savedTabLayout = view.findViewById(R.id.saved_tab_layout);
         savedViewPage2 = view.findViewById(R.id.saved_view_page);
-        saveViewPageAdapter = new SaveViewPageAdapter(this);
+        saveViewPageAdapter = new SaveViewPageAdapter(this.requireActivity());
         Button signUpBtn = view.findViewById(R.id.sign_up_btn);
         Button signInBtn = view.findViewById(R.id.sign_in_btn);
          notLoginContainer = view.findViewById(R.id.not_login_container);
@@ -58,7 +60,6 @@ public class Saved extends Fragment {
             public void onTabSelected(TabLayout.Tab tab) {
                 savedViewPage2.setVisibility(View.VISIBLE);
                 savedViewPage2.setCurrentItem(tab.getPosition());
-                System.out.println(tab.getText());
             }
 
             @Override
@@ -68,8 +69,6 @@ public class Saved extends Fragment {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                System.out.println("reselected");
-                savedViewPage2.setVisibility(View.VISIBLE);
 
             }
         });
@@ -80,7 +79,7 @@ public class Saved extends Fragment {
                 switch (position){
                     case 0:
                     case 1:
-                        savedTabLayout.getTabAt(position).select();
+                        Objects.requireNonNull(savedTabLayout.getTabAt(position)).select();
 
                 }
                 super.onPageSelected(position);

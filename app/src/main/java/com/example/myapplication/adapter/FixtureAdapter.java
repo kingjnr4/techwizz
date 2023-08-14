@@ -18,7 +18,11 @@ import com.example.myapplication.model.Fixture;
 
 
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+import java.time.temporal.TemporalAccessor;
 import java.util.List;
+import java.util.Locale;
 
 public class FixtureAdapter extends RecyclerView.Adapter<FixtureAdapter.FixtureViewHolder> {
 
@@ -42,13 +46,25 @@ public class FixtureAdapter extends RecyclerView.Adapter<FixtureAdapter.FixtureV
     public void onBindViewHolder(@NonNull FixtureViewHolder holder, int position) {
         Fixture fixture = fixtures.get(position);
 
-        holder.awayName.setText(fixture.getAway());
-        holder.homeName.setText(fixture.getHome());
+        holder.awayName.setText(fixture.getAwayTeam().getName());
+        holder.homeName.setText(fixture.getHomeTeam().getName());
 
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("EEE, MMM d");
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-        holder.matchDate.setText(fixture.getDate().format(dateFormatter));
-        holder.matchTime.setText(fixture.getDate().format(timeFormatter));
+
+        DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+                .appendPattern("dd MMM ")
+                .parseDefaulting(ChronoField.YEAR, 2023)
+                .appendPattern("HH:mm")
+                .toFormatter(Locale.ENGLISH);
+
+        TemporalAccessor temporal = formatter.parse(fixture.getDate());
+
+        // Extracting date and time components
+        String extractedDate = DateTimeFormatter.ofPattern("dd MMM").format(temporal);
+        String extractedTime = DateTimeFormatter.ofPattern("HH:mm").format(temporal);
+
+        holder.matchDate.setText(extractedDate);
+        holder.matchTime.setText(extractedTime);
+
 
         holder.itemView.setOnClickListener(e->{
             Intent intent = new Intent(view.getContext(), Club.class);

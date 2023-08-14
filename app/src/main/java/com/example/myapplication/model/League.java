@@ -11,13 +11,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Fixture {
+public class League {
     @DocumentId
     private String id;
-    private League league;
-    private Team homeTeam;
-    private Team awayTeam;
-    private String date;
-    private int homeScore=0;
-    private int awayScore=0;
+    private Country country;
+    private String name;
+    private String image;
+    private int rating;
 }
