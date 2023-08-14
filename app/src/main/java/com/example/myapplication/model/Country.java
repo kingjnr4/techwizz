@@ -11,13 +11,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Fixture {
+public class Country {
     @DocumentId
     private String id;
-    private League league;
-    private Team homeTeam;
-    private Team awayTeam;
-    private String date;
-    private int homeScore=0;
-    private int awayScore=0;
+    private String name;
+    private String image;
 }

@@ -15,6 +15,7 @@
         android:gravity="end|center">
 
         <TextView
+            android:id="@+id/away_team_name"
             android:textSize="12dp"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -23,9 +24,10 @@
             android:text="Manchester city" />
 
         <ImageView
-            android:layout_width="30dp"
+            android:id="@id/home_team_logo"
+            android:layout_width="22dp"
             android:layout_height="30dp"
-            android:src="@drawable/man_city_logo"/>
+            android:src="@drawable/man_city_logo" />
     </LinearLayout>
 
 
@@ -38,12 +40,14 @@
         android:orientation="vertical"
         >
         <TextView
+            android:id="@+id/match_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="06:00"
             android:fontFamily="@font/bold"
             android:textSize="14dp"/>
         <TextView
+            android:id="@+id/match_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="8 Oct"
@@ -59,10 +63,12 @@
         android:gravity="center_vertical">
 
         <ImageView
+            android:id="@+id/away_team_logo"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/chelsea_logo"/>
         <TextView
+            android:id="@+id/home_team_name"
             android:textSize="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

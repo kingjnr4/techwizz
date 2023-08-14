@@ -11,14 +11,15 @@ import com.example.myapplication.SavedTeamTab;
 public class SaveViewPageAdapter extends FragmentStateAdapter {
 
 
-    public SaveViewPageAdapter(@NonNull Fragment fragment) {
-        super(fragment);
+    public SaveViewPageAdapter(@NonNull FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
     }
 
     @NonNull
     @Override
     public Fragment createFragment(int position) {
         switch (position){
+            case 0: return new SavedPlayerTab();
             case 1: return new SavedTeamTab();
             default: return new SavedPlayerTab();
         }

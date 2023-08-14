@@ -26,11 +26,14 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         >
-        <include layout="@layout/fixture_card2" />
-        <include layout="@layout/fixture_card2" />
-        <include layout="@layout/fixture_card2" />
-        <include layout="@layout/fixture_card2" />
-        <include layout="@layout/fixture_card2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fixture_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/fixture_card2"
+            />
+
     </LinearLayout>
 
 </LinearLayout>
