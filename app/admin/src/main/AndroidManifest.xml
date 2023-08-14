@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/admin_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".AddPlayer" />
+        <activity android:name=".AddTeam" />
+        <activity android:name=".AddCountry" />
+        <activity android:name=".AddLeague" />
+        <activity android:name=".TeamActivity" />
+        <activity android:name=".PlayersActivity" />
+        <activity android:name=".LeagueActivity" />
+        <activity android:name=".CountryActivity" />
+        <activity android:name=".AddFixtureActivity" />
+        <activity android:name=".Contactus" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".AddAdminActivity" />
+        <activity android:name=".SettingsActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingRight="15dp"
+    android:background="@color/background"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_nav"
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_back_48px"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:fontFamily="@font/bold"
+            android:text="Settings" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit profile"
+            android:textSize="14dp"
+            android:paddingLeft="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_background"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/edit_phone_username_list"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Edit username"
+                android:textStyle="bold"
+                android:textColor="@color/font_color"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_background"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/edit_phone_number_list"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Edit phone number"
+                android:textStyle="bold"
+                android:textColor="@color/font_color"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08169629520"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Security"
+            android:textSize="14dp"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/change_password_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Change password "
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/menu_background"
+            android:textColor="@color/font_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danger zone"
+            android:textSize="14dp"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Delete account"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="@drawable/menu_background"
+            android:textColor="#dc143c"/>
+    </LinearLayout>
+
+</LinearLayout>
