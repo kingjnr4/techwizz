@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.adapter.TopScoreAdapter;
 import com.example.myapplication.model.Player;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SavedPlayerTab extends Fragment {
@@ -23,7 +24,7 @@ public class SavedPlayerTab extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.saved_player_tab, container,false);
 
-        List<Player> playerList = Home.FixtureDataGenerator.generateSampleTopScore().subList(0,4);
+        List<Player> playerList = new ArrayList<>();
 
         TopScoreAdapter topScoreAdapter = new TopScoreAdapter(view.getContext(), playerList);
 

@@ -7,11 +7,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.myapplication.PlayerActivity;
 import com.example.myapplication.model.Player;
 import com.example.myapplication.R;
@@ -43,9 +45,9 @@ public class HomeTopScoreAdapter extends RecyclerView.Adapter<HomeTopScoreAdapte
     @Override
     public void onBindViewHolder(@NonNull TopScoreViewHolder holder, int position) {
         Player player = players.get(position);
-        holder.playerName.setText(player.getPlayerName());
-        holder.playerPosition.setText(player.getPlayerPosition());
-
+        holder.playerName.setText(player.getSpacedFullName());
+        holder.playerPosition.setText(player.getPosition());
+  Glide.with(view.getContext()).load(player.getImage()).into(holder.playerImage);
         holder.itemView.setOnClickListener(e->{
             Intent intent = new Intent(view.getContext(), PlayerActivity.class);
             startActivity(view.getContext(),intent,null);
@@ -60,12 +62,14 @@ public class HomeTopScoreAdapter extends RecyclerView.Adapter<HomeTopScoreAdapte
     public class TopScoreViewHolder extends RecyclerView.ViewHolder{
 
         TextView playerName,playerPosition;
+        ImageView playerImage;
 
         public TopScoreViewHolder(@NonNull View itemView) {
 
             super(itemView);
              playerName = itemView.findViewById(R.id.player_name);
              playerPosition = itemView.findViewById(R.id.player_position);
+             playerImage=itemView.findViewById(R.id.player_image);
         }
     }
 }

@@ -18,6 +18,7 @@ import com.example.myapplication.model.Club;
 import com.example.myapplication.model.Fixture;
 import com.example.myapplication.model.Player;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -45,7 +46,6 @@ public class Home extends Fragment {
         db= FirebaseFirestore.getInstance();
         fixtureList = new ArrayList<>();
          playerList = new ArrayList<>();
-         playerList = FixtureDataGenerator.generateSampleTopScore();
         initList();
 
 
@@ -79,16 +79,16 @@ public class Home extends Fragment {
     public class FixtureDataGenerator {
 
 
-        public static List<Player> generateSampleTopScore(){
-            List<Player> players = new ArrayList<>();
-            Player player1 = new Player("Lionel Messi","CMA");
-            Player player2 = new Player("Cristiano Ronaldo","RMA");
-            Player player3 = new Player("Lionel Messi","CMA");
-            Player player4 = new Player("Lionel Messi","CMA");
-
-            players.addAll(List.of(player1,player2,player3,player4,player1,player2,player3,player4,player1,player2,player3,player4,player1,player2,player3,player4));
-            return players;
-        }
+//        public static List<Player> generateSampleTopScore(){
+//            List<Player> players = new ArrayList<>();
+//            Player player1 = new Player("Lionel Messi","CMA");
+//            Player player2 = new Player("Cristiano Ronaldo","RMA");
+//            Player player3 = new Player("Lionel Messi","CMA");
+//            Player player4 = new Player("Lionel Messi","CMA");
+//
+//            players.addAll(List.of(player1,player2,player3,player4,player1,player2,player3,player4,player1,player2,player3,player4,player1,player2,player3,player4));
+//            return players;
+//        }
 
         public static List<Club> generateSampleClub(){
             Club club1 = new Club("Chelsea FC");
@@ -113,6 +113,19 @@ public class Home extends Fragment {
                         Fixture fixture = documentSnapshot.toObject(Fixture.class);
                         fixtureList.add(fixture);
                         adapter.notifyDataSetChanged();
+                    }
+                }
+            }
+        });
+
+        db.collection("players").orderBy("goals", Query.Direction.ASCENDING).limit(4).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                QuerySnapshot snapshot = task.getResult();
+                if (!snapshot.isEmpty()) {
+                    for (QueryDocumentSnapshot documentSnapshot : snapshot) {
+                        Player player = documentSnapshot.toObject(Player.class);
+                        playerList.add(player);
+                        topScoreAdapter.notifyDataSetChanged();
                     }
                 }
             }

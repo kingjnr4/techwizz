@@ -44,6 +44,7 @@
                 android:src="@drawable/profile"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:id="@+id/user_pfp"
                 />
 
             <LinearLayout
@@ -54,6 +55,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/user_name"
                     android:textSize="17sp"
                     android:fontFamily="@font/bold"
                     android:textColor="@color/font_color"
@@ -63,6 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
+                    android:id="@+id/user_email"
                     android:text="johndoe@gmail.com" />
             </LinearLayout>
 

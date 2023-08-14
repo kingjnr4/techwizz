@@ -8,18 +8,24 @@ import android.widget.LinearLayout;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.myapplication.model.Player;
+import com.example.myapplication.model.Team;
+import com.google.firebase.firestore.Filter;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class Explore extends Fragment {
 
     RecyclerView clubSearchRecyclerview, playerSearchRecyclerview, leagueSearchRecyclerview, countrySearchRecyclerview;
     LinearLayout searchContainer, exploreContainer, clubSearchContainer, leagueSearchContainer, countrySearchContainer, playerSearchContainer;
     SearchView searchView;
+    private FirebaseFirestore db;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
          View view = inflater.inflate(R.layout.explore, container, false);
-
-
+         db=FirebaseFirestore.getInstance();
         searchView = view.findViewById(R.id.searchView);
 
          clubSearchRecyclerview = view.findViewById(R.id.club_search_recyclerview);
@@ -51,6 +57,7 @@ public class Explore extends Fragment {
                if(!newText.isEmpty()){
                    exploreContainer.setVisibility(View.GONE);
                    searchContainer.setVisibility(View.VISIBLE);
+
                }else{
                    exploreContainer.setVisibility(View.VISIBLE);
                    searchContainer.setVisibility(View.GONE);
@@ -61,4 +68,6 @@ public class Explore extends Fragment {
 
         return view;
     }
+
+
 }
