@@ -48,7 +48,7 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.sign_up);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).
                 requestIdToken(getString(R.string.default_web_client_id)).
-                requestProfile().build();
+                requestEmail().build();
         GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this, gso);
 
         usernameContainer = findViewById(R.id.username_container);

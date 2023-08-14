@@ -21,7 +21,9 @@ public class FeedBack extends AppCompatActivity {
     private TextInputLayout inputLayout;
     private TextInputEditText editText;
     private Button save;
+    FirebaseAuth auth;
     protected void onCreate( Bundle savedInstanceState) {
+        auth= FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feedback);
         ImageView backNav = findViewById(R.id.back_nav);
@@ -44,16 +46,17 @@ public class FeedBack extends AppCompatActivity {
         isvalid=false;
         }
         if(isvalid){
-            Feedback feedBack = Feedback.builder().build();
+            Feedback feedBack = new Feedback();
+            feedBack.setMessage(editText.getText().toString());
             uploadToFirebase(feedBack);
         }
 
     }
 
     private void uploadToFirebase(Feedback feedBack) {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        User user = new User();
+        User user = User.builder().build();
         user.setEmail(auth.getCurrentUser().getEmail());
         feedBack.setUser(user);
         db.collection("feedback").add(feedBack).addOnCompleteListener(task -> {

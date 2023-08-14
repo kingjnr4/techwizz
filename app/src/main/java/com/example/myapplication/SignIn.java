@@ -45,7 +45,7 @@ public class SignIn extends AppCompatActivity {
         db=FirebaseFirestore.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).
                 requestIdToken(getString(R.string.default_web_client_id)).
-                requestProfile().build();
+                requestEmail().build();
         GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this, gso);
         View signInLink = findViewById(R.id.signUpLink);
         emailContainer = findViewById(R.id.email_container);
